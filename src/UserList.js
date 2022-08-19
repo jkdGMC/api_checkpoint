@@ -18,7 +18,7 @@ export const UserList = () => {
   return (
     <div className='UserList'>
         <ul>
-            {listOfUsers.map(user => <li key={user.id}>{user.username}</li>)}
+            {listOfUsers.map(user => <li key={user.id}>{user.username}<br/>{user.email}<br/>{user.phone}<br/><br/></li>)}
         </ul>
     </div>
   )
