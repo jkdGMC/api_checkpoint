@@ -7,8 +7,13 @@ export const UserList = () => {
   const [listOfUsers,setListOfUsers] = useState([])
   
   const fetchData = async () =>{
-    const res = await axios.get("https://jsonplaceholder.typicode.com/users")
-    setListOfUsers(res.data)
+    try {
+      const res = await axios.get("https://jsonplaceholder.typicode.com/users")
+      setListOfUsers(res.data)
+    } catch (error) {
+      console.log(error)
+    }
+
   }
 
   useEffect(() => {
