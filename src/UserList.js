@@ -13,7 +13,6 @@ export const UserList = () => {
     } catch (error) {
       console.log(error)
     }
-
   }
 
   useEffect(() => {
